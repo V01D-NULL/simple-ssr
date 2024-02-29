@@ -1,0 +1,23 @@
+{
+  "name": "from-scratch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:server": "esbuild server.js --platform=node --minify --bundle --outfile=dist/server.js",
+    "build:client": "esbuild client.js framework.js --platform=browser --minify --bundle --outdir=dist/",
+    "build": "npm run build:server && npm run build:client",
+    "start": "node dist/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.3",
+    "snabbdom-to-html": "^7.1.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.20.1"
+  }
+}
